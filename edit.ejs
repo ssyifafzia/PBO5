@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Detinasi Pulau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Edit Destinasi Pulau</h2>
+    <form action="/update/<%= pulau.id %>" method="post">
+        <label for="name">name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="lokasi">lokasi:</label>
+        <input type="lokasi" name="lokasi" id="lokasi"><br>
+        <label for="harga">harga:</label>
+        <input type="harga" name="harga" id="harga"><br>
+        <label for="phone">telephone:</label>
+        <input type="text" name="phone" id="phone"><br>
+        <button type="submit">Tambah</button>
+    </form>
+
+</body>
+</html>

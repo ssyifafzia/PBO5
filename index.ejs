@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Node JS - MySQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Destinasi Pulau Terbaik di Indonesia  </h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>lokasi</th>
+            <th>harga</th>
+            <th>telephone</th>
+            <th>Aksi</th>
+        </tr>
+        <% pulau.forEach(Pengguna => {%>
+        <tr>
+            <td><%= Pengguna.id %></td>
+            <td><%= Pengguna.name %></td>
+            <td><%= Pengguna.lokasi %></td>
+            <td><%= Pengguna.harga %></td>
+            <td><%= Pengguna.phone %></td>
+            <td>
+                <a href="/edit/<%= Pengguna.id %>">Edit</a>
+                <a href="/delete/<%= Pengguna.id %>">Hapus</a>
+            </td>
+        </tr>
+        <% })%>
+    </table>
+
+    <h2 id="Tambah">Tambah Destinasi Pulau </h2>
+    <form action="/add" method="post">
+        <label for="name">name:</label>
+        <input type="text" Name="name" placeholder="Nama Pulau">
+        <label for="lokasi">lokasi:</label>
+        <input type="text" name="lokasi" placeholder="Lokasi Pulau">
+        <label for="harga">harga:</label>
+        <input type="text" name="harga" placeholder="Harga Tiket">
+        <label for="phone">telephone:</label>
+        <input type="text" name="phone" placeholder="Nomor Telepon">
+        <button type="submit">Tambah</button>
+    </form>
+
+</body>
+</html>
